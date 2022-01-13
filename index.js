@@ -149,9 +149,9 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 // 2 parameters array, index
-function removeFlavorByName(array, index){
+function removeFlavorByName(array, item){
   for(let i = 0; i < array.length; i++){
-    if(array[i] === index){
+    if(array[i] === item){
       array.splice(i, 1);
     }
 
@@ -185,12 +185,19 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 // 2 parameters array, string
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(array, item){
+
+  const filteredArray = [];
+
+  for(let i = 0; i < array.length; i++){
+    if(array[i].includes(item)){
+      filteredArray.push(array[i]);
+    }
+  }
   // create new array called filteredArray to push my values to
   // loop through the original array and check each item
   // if the item includes the string, I want to push it to that filteredArray
-
+return filteredArray
   // outside of the for loop, return that filtered array
 }
 
